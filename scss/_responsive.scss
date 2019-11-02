@@ -40,6 +40,11 @@
 @media (max-width:991px){
 	/* Main Menu Area css
 	============================================================================================ */
+
+	.navbar-light .navbar-brand {
+		color: #FFFFFF;
+	}
+
     .navbar-toggler {
         border: none;
         border-radius: 0px;
