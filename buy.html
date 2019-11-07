@@ -61,7 +61,7 @@
 							<li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#pricing" class="primary_btn text-uppercase">przedsprzedaż</a></li>
+<!--							<li class="nav-item"><a href="#pricing" class="primary_btn text-uppercase">przedsprzedaż</a></li>-->
 						</ul>
 					</div>
 				</div>
@@ -95,10 +95,22 @@
 			</div>
 		</div>
 		<div class="col-lg-9">
-			<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+			<form class="row contact_form" action="contact_process.php" method="get" id="orderForm" novalidate="novalidate" action="https://sklep.przelewy24.pl/zakup.php">
+				<input type="hidden" name="z24_id_sprzedawcy" value="98443">
+				<input type="hidden" name="z24_crc" value="214afc93cd1ebafb">
+				<input type="hidden" name="z24_return_url" value="http://projektit.gloci.eu">
+				<input type="hidden" name="z24_language" value="pl">
+				<input type="hidden" name="z24_kwota" value="100">
+				<input id="orderno" type="hidden" name="z24_nazwa" value="Projekt IT - przedsprzedaz / ">
+
+				<script>
+					document.getElementById("orderno").value = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+				</script>
+
 				<div class="col-md-6">
 					Płatność realizowana przez Przelewy24 </br>
-				Swoje dane podaj w dalszej części
+					Swoje dane podaj w dalszej części ? </br>
+
 					<!--<div class="form-group">-->
 						<!--<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">-->
 					<!--</div>-->
@@ -111,7 +123,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<textarea class="form-control" name="message" id="message" rows="1" placeholder="Uwagi"></textarea>
+						<textarea class="form-control" name="z24_opis" id="message" rows="1" placeholder="Jeśli masz dodatkowe uwagi - wpisz je tutaj."></textarea>
 					</div>
 				</div>
 				<div class="col-md-12 text-right">
