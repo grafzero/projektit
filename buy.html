@@ -40,7 +40,7 @@
 						<ul class="nav navbar-nav menu_nav justify-content-center">
 							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
-							<li class="nav-item active"><a class="nav-link" href="price.html">Pricing</a></li>
+							<li class="nav-item active"><a class="nav-link" href="buy.html">Pricing</a></li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Pages</a>
@@ -68,6 +68,39 @@
 	</header>
 	<!--================Header Menu Area =================-->
 
+
+	<section>
+		<form method="get" action="https://sklep.przelewy24.pl/zakup.php">
+			<input type="hidden" name="z24_id_sprzedawcy" value="TWOJ_ID">
+			<input type="hidden" name="z24_crc" value="KLUCZ_ZAKUPU">
+			<input type="hidden" name="z24_return_url" value="TWOJASTRONA.PL">
+			<input type="hidden" name="z24_language" value="pl">
+			<table>
+				<tr>
+					<td align="right">Nazwa produktu:</td>
+					Specyfikacja instalacji uproszczonej
+					Strona 3 z 3
+					www.przelewy24.pl Dialcom24 Sp. z o.o. 60-327 Poznań, ul. Kanclerska 15, tel. (0-61) 847 52 64 fax (0-61) 847 08 38 info@przelewy24.pl
+					<td>
+						<input type="text" name="z24_nazwa" value="Opłata za rezerwację NR: 04/234/A3953">
+					</td>
+				</tr>
+				<tr>
+					<td align="right">Dodatkowy opis:</td>
+					<td>
+						<textarea name="z24_opis" style="width:250px">Dodatkowe informacje...</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">Do zapłaty:</td>
+					<td><input type="text" name="z24_kwota"></td><!--KWOTA W GROSZACH-->
+				</tr>
+			</table>
+			<input type="submit" value="zapłać z przelewy24.pl">
+		</form>
+	</section>
+
+
 	<!--================ Start Pricing Banner Area =================-->
 	<section class="banner_area">
 		<div class="banner_inner d-flex align-items-center">
@@ -76,7 +109,7 @@
 				<div class="banner_content text-left">
 					<div class="page_link">
 						<a href="index.html">Home</a>
-						<a href="price.html">Pricing</a>
+						<a href="buy.html">Pricing</a>
 					</div>
 					<h2>Pricing Plans</h2>
 				</div>
