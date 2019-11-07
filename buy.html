@@ -28,9 +28,10 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/computer.svg" alt="logo" height="40px">&nbsp;Projekt IT</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+							data-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -38,28 +39,29 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-center">
-							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
-							<li class="nav-item active"><a class="nav-link" href="buy.html">Pricing</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item active"><a class="nav-link" href="index.html">Strona główna</a></li>
+							<li class="nav-item"><a class="nav-link" href="#details">O kursie</a></li>
+							<li class="nav-item"><a class="nav-link" href="#pricing">Sprzedaż</a></li>
+							<!--							<li class="nav-item submenu dropdown">-->
+							<!--								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"-->
+							<!--								 aria-expanded="false">Pages</a>-->
+							<!--								<ul class="dropdown-menu">-->
+							<!--									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>-->
+							<!--								</ul>-->
+							<!--							</li>-->
+							<!--							<li class="nav-item submenu dropdown">-->
+							<!--								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"-->
+							<!--								 aria-expanded="false">Blog</a>-->
+							<!--								<ul class="dropdown-menu">-->
+							<!--									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>-->
+							<!--									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>-->
+							<!--								</ul>-->
+							<!--							</li>-->
+							<li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+							<li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#" class="primary_btn text-uppercase">free trial</a></li>
+							<li class="nav-item"><a href="#pricing" class="primary_btn text-uppercase">przedsprzedaż</a></li>
 						</ul>
 					</div>
 				</div>
@@ -70,10 +72,62 @@
 
 
 	<section>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<div class="contact_info">
+				<div class="info_item">
+					<i class="lnr lnr-home"></i>
+					<h6>Cena całkowita</h6>
+					<p>725,70 PLN</p>
+				</div>
+				<div class="info_item">
+					<i class="lnr lnr-phone-handset"></i>
+					<h6><a href="#">VAT 23%</a></h6>
+					<p>135,70 PLN</p>
+				</div>
+				<div class="info_item">
+					<i class="lnr lnr-envelope"></i>
+					<h6><a href="#">Cena netto</a></h6>
+					<p>590 PLN</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-lg-9">
+			<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+				<div class="col-md-6">
+					Płatność realizowana przez Przelewy24 </br>
+				Swoje dane podaj w dalszej części
+					<!--<div class="form-group">-->
+						<!--<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">-->
+					<!--</div>-->
+					<!--<div class="form-group">-->
+						<!--<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">-->
+					<!--</div>-->
+					<!--<div class="form-group">-->
+						<!--<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">-->
+					<!--</div>-->
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<textarea class="form-control" name="message" id="message" rows="1" placeholder="Uwagi"></textarea>
+					</div>
+				</div>
+				<div class="col-md-12 text-right">
+					<button type="submit" value="submit" class="primary_btn"><span>Zamawiam</span></button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
 		<form method="get" action="https://sklep.przelewy24.pl/zakup.php">
-			<input type="hidden" name="z24_id_sprzedawcy" value="TWOJ_ID">
-			<input type="hidden" name="z24_crc" value="KLUCZ_ZAKUPU">
-			<input type="hidden" name="z24_return_url" value="TWOJASTRONA.PL">
+			<input type="hidden" name="z24_id_sprzedawcy" value="98443">
+			<input type="hidden" name="z24_crc" value="214afc93cd1ebafb">
+			<input type="hidden" name="z24_return_url" value="http://projektit.gloci.eu">
 			<input type="hidden" name="z24_language" value="pl">
 			<table>
 				<tr>
@@ -92,7 +146,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td align="right">Do zapłaty:</td>
+					<td align="right">Kwota: 1 PLN</td>
 					<td><input type="text" name="z24_kwota"></td><!--KWOTA W GROSZACH-->
 				</tr>
 			</table>
