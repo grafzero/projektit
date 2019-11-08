@@ -77,10 +77,10 @@
 			<div class="container">
 				<div class="banner_content text-left">
 					<div class="page_link">
-						<a href="index.html">Wstecz</a>
-						<a href="buy.html">Pricing</a>
+						<a href="index.html">Strona główna</a>
+						<a href="buy.html">Zamówienia</a>
 					</div>
-					<h2>Formularz zamówienia </h2>
+					<h2>Formularz zamówienia</h2>
 				</div>
 			</div>
 		</div>
@@ -90,7 +90,12 @@
 	<section class="section_gap features_area">
 <div class="container">
 	<div class="row">
-		<div class="col-lg-3">
+
+		<div class="col-lg-12 common_style text-left">
+			<h4 class="line">Podsumowanie zamówienia:</h4>
+		</div>
+
+		<div class="col-lg-2" style="border-right: 2px solid #b991f9">
 			<div class="contact_info">
 				<div class="info_item">
 					<i class="lnr lnr-home"></i>
@@ -110,7 +115,7 @@
 
 			</div>
 		</div>
-		<div class="col-lg-9">
+		<div class="col-lg-7">
 			<form class="row contact_form" method="get" id="orderForm" novalidate="novalidate" action="https://sklep.przelewy24.pl/zakup.php">
 				<input type="hidden" name="z24_id_sprzedawcy" value="98443">
 				<input type="hidden" name="z24_crc" value="214afc93cd1ebafb">
@@ -123,10 +128,17 @@
 					document.getElementById("orderno").value = ('Kurs Projekt IT - zamowienie nr: ')+Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 				</script>
 
-				<div class="col-md-6">
+				<div class="col-md-6 common_style">
+
 					Płatność realizowana przez Przelewy24 </br>
 					Swoje dane podaj w dalszej części ? </br>
+					<div class="price_footer">
+						<h3> KURS PROJEKT IT</h3>
+						<ul>
 
+						</ul>
+<!--						<a class="primary_btn" href="/buy.html"><span>Zarejestruj się</span></a>-->
+					</div>
 					<!--<div class="form-group">-->
 						<!--<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">-->
 					<!--</div>-->
@@ -142,7 +154,7 @@
 						<textarea class="form-control" name="z24_opis" id="message" rows="1" placeholder="Jeśli masz dodatkowe uwagi - wpisz je tutaj."></textarea>
 					</div>
 				</div>
-				<div class="col-md-12 text-right">
+				<div class="col-md-12 text-left">
 					<button type="submit" value="submit" class="primary_btn"><span>Zamawiam</span></button>
 				</div>
 			</form>
@@ -158,63 +170,9 @@
 
 
 
-	<!--================Start Features Area =================-->
-	<section class="section_gap features_area">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<p class="top_title">Exclusive Stunning Features</p>
-						<h2>A Complete Software Based Website</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-						<a href="#" class="primary_btn"><span>Start Free Trial Now!</span></a>
-					</div>
-				</div>
-			</div>
-			<div class="row align-items-center">
-				<div class="col-lg-6">
-					<div class="left_features">
-						<img class="img-fluid" src="img/f-img.png" alt="">
-					</div>
-				</div>
-				<div class="col-lg-5 offset-lg-1">
-					<!-- single features -->
-					<div class="single_feature">
-						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-							<h4>Stunning Visuals</h4>
-						</div>
-						<div class="feature_content">
-							<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola.</p>
-						</div>
-					</div>
-					<!-- single features -->
-					<div class="single_feature">
-						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-							<h4>Stunning Visuals</h4>
-						</div>
-						<div class="feature_content">
-							<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola.</p>
-						</div>
-					</div>
-					<!-- single features -->
-					<div class="single_feature">
-						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-							<h4>Stunning Visuals</h4>
-						</div>
-						<div class="feature_content">
-							<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Features Area =================-->
 
-	<!--================Srart Pricing Area =================-->
+
+	<!--================Start Pricing Area =================-->
 	<section class="price_area section_gap_top">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -289,54 +247,7 @@
 	</section>
 	<!--================End Pricing Area =================-->
 
-	<!--================ Srart Brand Area =================-->
-	<section class="brand_area section_gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="owl-carousel brand-carousel">
-						<!-- single-brand -->
-						<div class="single-brand-item d-table">
-							<div class="d-table-cell">
-								<img src="img/brands/logo1.png" alt="">
-							</div>
-						</div>
-						<!-- single-brand -->
-						<div class="single-brand-item d-table">
-							<div class="d-table-cell">
-								<img src="img/brands/logo2.png" alt="">
-							</div>
-						</div>
-						<!-- single-brand -->
-						<div class="single-brand-item d-table">
-							<div class="d-table-cell">
-								<img src="img/brands/logo3.png" alt="">
-							</div>
-						</div>
-						<!-- single-brand -->
-						<div class="single-brand-item d-table">
-							<div class="d-table-cell">
-								<img src="img/brands/logo4.png" alt="">
-							</div>
-						</div>
-						<!-- single-brand -->
-						<div class="single-brand-item d-table">
-							<div class="d-table-cell">
-								<img src="img/brands/logo5.png" alt="">
-							</div>
-						</div>
-						<!-- single-brand -->
-						<div class="single-brand-item d-table">
-							<div class="d-table-cell">
-								<img src="img/brands/logo6.png" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Brand Area =================-->
+
 
 	<!--================Footer Area =================-->
 	<footer class="footer_area">
