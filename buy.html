@@ -115,17 +115,12 @@
                 </div>
             </div>
             <div class="col-lg-7">
-                <form class="row contact_form" method="get" id="orderForm" novalidate="novalidate"
+                <form class="row contact_form" method="POST" id="orderForm" novalidate="novalidate"
                       action="https://init-registrationapp.herokuapp.com/adduser">
-                    <input type="hidden" name="z24_id_sprzedawcy" value="98443">
-                    <input type="hidden" name="z24_crc" value="214afc93cd1ebafb">
-                    <input type="hidden" name="z24_return_url" value="http://projektit.gloci.eu">
-                    <input type="hidden" name="z24_language" value="pl">
-                    <input type="hidden" name="z24_kwota" value="100">
-                    <input id="orderno" type="hidden" name="z24_nazwa" value="Projekt IT - przedsprzedaz / ">
+                    <input type="hidden" name="packetType" value="preRegistration">
 
                     <script>
-                        document.getElementById("orderno").value = ('Kurs Projekt IT - zamowienie nr: ') + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                      //  document.getElementById("orderno").value = ('Kurs Projekt IT - zamowienie nr: ') + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
                     </script>
 
                     <div class="col-md-6 common_style">
@@ -142,12 +137,13 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <textarea class="form-control" name="z24_opis" id="message" rows="1"
-                                      placeholder="Jeśli masz dodatkowe uwagi - wpisz je tutaj."></textarea>
+                            <input type="email" class="form-control" name="email" id="message"
+                                      placeholder="adres e-mail" required/>
                         </div>
                     </div>
                     <div class="col-md-12 text-left">
-                        <button type="submit" value="submit" class="primary_btn"><span>Zamawiam</span></button>
+                        <button type="submit" value="submit" class="primary_btn"><span>Rezerwuję miejsce*</span></button>
+                        *bez zobowiązań!
                     </div>
                 </form>
             </div>
