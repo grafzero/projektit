@@ -10,6 +10,11 @@
 @media (max-width:1300px){
 }
 @media (max-width:1199px){
+
+	iframe {
+		max-width: 100%;
+	}
+
 	/* Main Menu Area css
 	============================================================================================ */
 	.header_area .navbar .nav .nav-item {
