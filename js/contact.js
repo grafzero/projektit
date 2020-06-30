@@ -57,7 +57,7 @@ $(document).ready(function(){
             submitHandler: function(form) {
                 $(form).ajaxSubmit({
                     type:"POST",
-                    data: $(form).serialize(),
+                    data: $(form),
                     url:"https://formspree.io/myynddlo",
                     success: function() {
                         $('#contactForm :input').attr('disabled', 'disabled');
