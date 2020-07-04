@@ -31,6 +31,12 @@
 
         gtag('config', 'UA-151959892-1');
     </script>
+    <style>
+        #error,
+        #success {
+            display: none;
+        }
+    </style>
 
 </head>
 
@@ -89,12 +95,14 @@
 
 <section class="section_gap features_area">
     <div class="container">
+        <div id="success" class="alert alert-success" role="alert">
+            Dziękujemy za rejestrację. Potwierdzenie wyślemy wkrótce mailem. Jesli masz pytania wyślij je na adres
+            kontakt@projektit.online
+        </div>
+        <div id="error" class="alert alert-danger" role="alert">
+            Niestety nie udało się wysłać formularza. Skontaktuj się z nami przez kontakt@projektit.online
+        </div>
         <div class="row">
-
-            <div class="alert alert-success" role="alert">
-                Dziękujemy za rejestrację. Potwierdzenie wyślemy wkrótce mailem.
-            </div>
-
             <div class="col-lg-12 common_style text-left">
                 <h4 class="line">Podsumowanie zamówienia:</h4>
             </div>
@@ -268,6 +276,24 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 <script src="js/gmaps.min.js"></script>
 <script src="js/theme.js"></script>
+<script>
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+
+    var result = getUrlVars()["result"];
+    if (result === 'success') {
+        document.getElementById("success").style.display = "block";
+    }
+
+    if (result = 'error') {
+        document.getElementById("error").style.display = "block";
+    }
+</script>
 </body>
 
 </html>
