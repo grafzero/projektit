@@ -33,7 +33,9 @@
     </script>
     <style>
         #error,
-        #success {
+        #success,
+        #confError,
+        #confSuccess {
             display: none;
         }
     </style>
@@ -101,6 +103,13 @@
         </div>
         <div id="error" class="alert alert-danger" role="alert">
             Niestety nie udało się wysłać formularza. Skontaktuj się z nami przez kontakt@projektit.online
+        </div>
+
+        <div id="confSuccess" class="alert alert-success" role="alert">
+            Dziękujemy za potwierdzenie adresu. Oczekuj na kolejne informacje na temat kursu :)
+        </div>
+        <div id="confError" class="alert alert-danger" role="alert">
+            Niestety nie udało się potwierdzić adresu. Skontaktuj się z nami przez kontakt@projektit.online
         </div>
         <div class="row">
             <div class="col-lg-12 common_style text-left">
@@ -293,6 +302,17 @@
     if (result === 'error') {
         document.getElementById("error").style.display = "block";
     }
+
+    var confirmation = getUrlVars()["confirmation"];
+    if (confirmation === 'success') {
+        document.getElementById("confSuccess").style.display = "block";
+    }
+
+    if (confirmation === 'error') {
+        document.getElementById("confError").style.display = "block";
+    }
+
+
 </script>
 </body>
 
