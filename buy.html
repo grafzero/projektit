@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/computer.svg" type="image/svg">
     <title>Projekt IT - zamówienie</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -121,27 +121,37 @@
                     <div class="info_item">
                         <i class="lnr lnr-tag"></i>
                         <h6><a href="#">Cena netto</a></h6>
-                        <p>590 PLN</p>
+                        <p> <span id="priceNet">490</span> PLN</p>
                     </div>
                     <div class="info_item">
                         <i class="lnr lnr-apartment"></i>
                         <h6><a href="#">VAT 23%</a></h6>
-                        <p>135,70 PLN</p>
+                        <p><span id="vat"></span> PLN</p>
                     </div>
                     <div class="info_item">
                         <i class="lnr lnr-cart"></i>
                         <h6>Cena całkowita</h6>
-                        <p>725,70 PLN</p>
+                        <p><span id="totalPrice"></span> PLN</p>
                     </div>
                 </div>
             </div>
+            <script>
+                var priceNet = document.getElementById("priceNet").textContent;
+                var vatElement = document.getElementById("vat");
+                var totalPriceElement = document.getElementById("totalPrice");
+                vatElement.innerHTML = (priceNet * 0.23).toFixed(2);
+                totalPriceElement.innerHTML = (parseFloat(vatElement.textContent) + parseFloat(priceNet)).toFixed(2);
+            </script>
             <div class="col-lg-7">
                 <form class="row contact_form" method="POST" id="orderForm" novalidate="novalidate"
                       action="https://init-registrationapp.herokuapp.com/adduser">
                     <input type="hidden" name="packetType" value="0">
+                    <input type="hidden" name="price" id="priceInForm" value="0">
 
                     <script>
-                        //  document.getElementById("orderno").value = ('Kurs Projekt IT - zamowienie nr: ') + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                        var totalPriceElement = document.getElementById("totalPrice");
+                        var priceInFormElement = document.getElementById("priceInForm");
+                        priceInFormElement.value = (totalPriceElement.textContent);
                     </script>
 
                     <div class="col-md-6 common_style">
@@ -165,6 +175,12 @@
                             <input class="form-control" type="hidden" id="packetQty"
                                    name="packetQty" value="1"/>
                         </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="true" name="rodoConsent" id="rodo"> <small>Wyrażam zgodę na przetwarzanie danych osobowych na potrzeby realizacji kursu Projekt IT</small> </label>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-md-12 text-left">
                         <button type="submit" value="submit" class="primary_btn"><span>Rezerwuję miejsce*</span>
